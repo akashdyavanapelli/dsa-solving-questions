@@ -2,12 +2,20 @@
   "name": "dsa-solving-questions",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/akashdyavanapelli/dsa-solving-questions#readme",
+  "bugs": {
+    "url": "https://github.com/akashdyavanapelli/dsa-solving-questions/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akashdyavanapelli/dsa-solving-questions.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module"
+  }
 }

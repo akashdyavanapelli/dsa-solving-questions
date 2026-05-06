@@ -2,6 +2,9 @@ export const isAnagram = (str1, str2) => {
   console.log("isAnagram");
   if (str1.length !== str2.length) return false;
 
+  str1 = str1.toLowerCase();
+  str2 = str2.toLowerCase();
+
   // for (const char2 of str2) {
   //   if (char2 !== char) {
   // if (!str2.includes(char)) {
@@ -37,10 +40,10 @@ export const isAnagram = (str1, str2) => {
   }
 
   for (const char of str2) {
-    if (map.get(char)) {
-      map.set(char, map.get(char) - 1);
-      if (map.get(char) === 0) map.delete(char);
-    }
+    if (!map.get(char)) return false;
+    map.set(char, map.get(char) - 1);
+    if (map.get(char) === 0) map.delete(char);
+    console.log(map);
   }
 
   return map.size === 0;
@@ -48,7 +51,7 @@ export const isAnagram = (str1, str2) => {
 
 // console.log(isAnagram("mar", "ram"));
 // console.log(isAnagram("anagram", "nagaram"));
-// console.log(isAnagram("rat", "car"));
+console.log(isAnagram("rat", "car"));
 // console.log(isAnagram("aab", "ab"));
-// console.log(isAnagram("ccac", "aacc"));/
-
+// console.log(isAnagram("ccac", "aacc"));
+// console.log(isAnagram("rail safety", "fairy tales"));

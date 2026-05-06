@@ -43,7 +43,6 @@ export const isAnagram = (str1, str2) => {
     if (!map.get(char)) return false;
     map.set(char, map.get(char) - 1);
     if (map.get(char) === 0) map.delete(char);
-    console.log(map);
   }
 
   return map.size === 0;
